@@ -39,9 +39,9 @@ Soy un ingeniero de software enfocado en sistemas e infraestructura distribuida,
 | **Rust** | Producción Diaria | Núcleos seguros en memoria, entornos concurrentes, abstracciones del SO |
 | **C (C11 / GNU99)** | Producción Diaria | Módulos del kernel Linux, programas eBPF, programación de sistemas POSIX |
 | **C++ (C++20)** | Avanzado | Estructuras de datos lock-free de alto rendimiento, vectorización SIMD |
-| **Go** | Avanzado | Planos de control distribuidos, micro-demonios RPC, redes en la nube |
-| **POSIX Shell / Bash** | Competente | Scripts de despliegue automatizado, compilación de kernels, orquestación CI |
-| **Python** | Competente | Arneses de análisis de benchmarks, verificación automatizada, prototipos |
+| **Go** | Avanzado | Planos de control distribuidos, servicios RPC de alto rendimiento, redes en la nube |
+| **POSIX Shell / Bash** | Competente | Scripts de despliegue en producción, compilación de kernels, cadenas CI/CD |
+| **Python** | Competente | Arneses de análisis de benchmarks, verificación de regresión, modelado de rendimiento |
 
 ### Sistemas, Kernel y Arquitectura de Bajo Nivel
 
@@ -70,7 +70,7 @@ Soy un ingeniero de software enfocado en sistemas e infraestructura distribuida,
   - Registro de escritura previa (WAL) segmentado con sumas de comprobación CRC32 para garantizar consistencia ante caídas del sistema.
   - Compactación escalonada en dos niveles que minimiza la amplificación de escritura manteniendo el p99 de lectura por debajo de 120 microsegundos.
 
-### 3. `packet-lens` — Agente de Telemetría de Flujos eBPF en Espacio de Kernel
+### 3. `packet-lens` — Sonda de Telemetría de Flujos eBPF en Espacio de Kernel
 - **Lenguaje**: C / Go
 - **Descripción**: Demonio de observabilidad de red ultraligero acoplado a ganchos eBPF XDP/TC que extrae tiempos de ida y vuelta TCP (RTT), tasas de pérdida de paquetes y retransmisiones con mínimo impacto en CPU.
 - **Aspectos Destacados**:

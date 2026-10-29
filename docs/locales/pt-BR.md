@@ -39,9 +39,9 @@ Sou um engenheiro de software focado em sistemas de baixo nível e infraestrutur
 | **Rust** | Produção Diária | Motores de sistema com segurança de memória, runtimes concorrentes |
 | **C (C11 / GNU99)** | Produção Diaria | Módulos do kernel Linux, programas eBPF, programação POSIX de baixo nível |
 | **C++ (C++20)** | Avançado | Estruturas de dados lock-free de alto desempenho, vetorização SIMD |
-| **Go** | Avançado | Planos de controle distribuídos, micro-daemons RPC, redes em nuvem |
-| **POSIX Shell / Bash** | Fluente | Scripts de implantação automatizada, compilação de kernels, automação CI |
-| **Python** | Fluente | Ferramentas de análise de benchmarks, testes automatizados, protótipos |
+| **Go** | Avançado | Planos de controle distribuídos, serviços RPC de alta vazão, redes em nuvem |
+| **POSIX Shell / Bash** | Fluente | Scripts de implantação em produção, compilação de kernels, pipelines CI/CD |
+| **Python** | Fluente | Ferramentas de análise de benchmarks, testes de regressão, modelagem de desempenho |
 
 ### Sistemas, Kernel e Arquitetura de Baixo Nível
 
@@ -70,9 +70,9 @@ Sou um engenheiro de software focado em sistemas de baixo nível e infraestrutur
   - Log pré-gravação (WAL) segmentado com somas de verificação CRC32, garantindo consistência contra falhas do sistema.
   - Compactação escalonada em dois níveis, minimizando a amplificação de escrita e mantendo a latência p99 de leitura abaixo de 120 microssegundos.
 
-### 3. `packet-lens` — Agente de Telemetria de Fluxo eBPF em Espaço de Kernel
+### 3. `packet-lens` — Sonda de Telemetria de Fluxo eBPF em Espaço de Kernel (Probe)
 - **Linguagem**: C / Go
-- **Descrição**: Daemon ultraleve de observabilidade de rede conectado a ganchos eBPF XDP/TC, capturando RTT de conexões TCP, taxa de perda de pacotes e retransmissões com custo mínimo de CPU.
+- **Descrição**: Sonda ultraleve de observabilidade de rede conectada a ganchos eBPF XDP/TC, capturando RTT de conexões TCP, taxa de perda de pacotes e retransmissões com custo mínimo de CPU.
 - **Destaques**:
   - Opera integralmente no espaço do kernel; transfere métricas via buffers circulares sem copiar pacotes brutos para o espaço do usuário.
   - Exportador nativo de métricas para Prometheus com alertas de degradação de rede em milissegundos.

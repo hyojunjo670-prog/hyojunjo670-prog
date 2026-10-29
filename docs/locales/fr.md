@@ -39,9 +39,9 @@ Je suis un ingénieur logiciel spécialisé dans les systèmes et les infrastruc
 | **Rust** | Production Quotidienne | Moteurs système sûrs en mémoire, runtimes asynchrones, abstractions système |
 | **C (C11 / GNU99)** | Production Quotidienne | Modules noyau Linux, programmes eBPF, programmation système POSIX bas niveau |
 | **C++ (C++20)** | Avancé | Structures de données lock-free haute performance, vectorisation SIMD |
-| **Go** | Avancé | Plans de contrôle distribués, micro-démons RPC, mise en réseau cloud |
-| **POSIX Shell / Bash** | Compétent | Scripts de déploiement automatisés, pipelines de compilation du noyau, CI |
-| **Python** | Compétent | Outils d'analyse de benchmarks, vérification automatisée, prototypage |
+| **Go** | Avancé | Plans de contrôle distribués, services RPC à haut débit, mise en réseau cloud |
+| **POSIX Shell / Bash** | Compétent | Scripts de déploiement en production, pipelines de compilation du noyau, chaînes CI/CD |
+| **Python** | Compétent | Outils d'analyse de benchmarks, vérification de régression, modélisation de performance |
 
 ### Systèmes, Noyau et Architecture Bas Niveau
 
@@ -70,7 +70,7 @@ Je suis un ingénieur logiciel spécialisé dans les systèmes et les infrastruc
   - Journal de pré-écriture (WAL) segmenté avec sommes de contrôle CRC32 garantissant l'intégrité après panne.
   - Compactage étagé à deux niveaux minimisant l'amplification d'écriture tout en maintenant la latence de lecture p99 sous les 120 microsecondes.
 
-### 3. `packet-lens` — Agent de Télémétrie eBPF en Espace Noyau
+### 3. `packet-lens` — Sonde de Télémétrie eBPF en Espace Noyau
 - **Langage** : C / Go
 - **Description** : Démon d'observabilité réseau ultra-léger attaché aux points d'ancrage eBPF XDP/TC, extrayant le temps d'aller-retour TCP (RTT), les pertes de paquets et l'état des retransmissions sans surcoût CPU notable.
 - **Points Forts** :

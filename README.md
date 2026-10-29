@@ -39,9 +39,9 @@ I am a systems and distributed infrastructure software engineer dedicated to bui
 | **Rust** | Production Daily | Memory-safe systems engines, concurrent runtimes, safe OS abstractions |
 | **C (C11 / GNU99)** | Production Daily | Linux kernel modules, eBPF programs, low-level POSIX systems programming |
 | **C++ (C++20)** | Advanced | High-performance lock-free data structures, SIMD vectorization |
-| **Go** | Advanced | Distributed control planes, RPC micro-daemons, cloud networking |
-| **POSIX Shell / Bash** | Proficient | Automated deployment scripts, kernel build pipelines, CI orchestration |
-| **Python** | Proficient | Benchmark analysis harnesses, automated verification, data modeling |
+| **Go** | Advanced | Distributed control planes, high-throughput RPC services, cloud networking |
+| **POSIX Shell / Bash** | Proficient | Production deployment scripts, kernel build pipelines, CI/CD toolchains |
+| **Python** | Proficient | Benchmark analysis harnesses, regression verification, performance modeling |
 
 ### Systems, Kernel & Low-Level Architecture
 
@@ -70,9 +70,9 @@ I am a systems and distributed infrastructure software engineer dedicated to bui
   - Segmented Write-Ahead Log (WAL) with CRC32 checksums guaranteeing crash consistency.
   - Two-level tiered compaction minimizing write amplification while keeping read p99 below 120 microseconds.
 
-### 3. `packet-lens` — Kernel-Space eBPF Flow Telemetry Agent
+### 3. `packet-lens` — Kernel-Space eBPF Flow Telemetry Probe
 - **Language**: C / Go
-- **Description**: A lightweight network observability daemon attached via eBPF XDP/TC hooks to extract TCP round-trip time, packet drop metrics, and retransmission states with near-zero CPU footprint.
+- **Description**: A lightweight network observability probe attached via eBPF XDP/TC hooks to extract TCP round-trip time, packet drop metrics, and retransmission states with near-zero CPU footprint.
 - **Highlights**:
   - Operates entirely within kernel space; outputs telemetry data into ring buffers without copying raw packets to user space.
   - Native Prometheus metrics exporter emitting sub-millisecond network degradation alerts.

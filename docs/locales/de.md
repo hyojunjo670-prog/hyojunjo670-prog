@@ -39,9 +39,9 @@ Ich bin ein Software-Ingenieur für Systemprogrammierung und verteilte Infrastru
 | **Rust** | Tägliche Produktion | Speichersichere Systemkerne, asynchrone Runtimes, sichere Betriebssystemabstraktionen |
 | **C (C11 / GNU99)** | Tägliche Produktion | Linux-Kernel-Module, eBPF-Programme, hardwarenahe POSIX-Systemprogrammierung |
 | **C++ (C++20)** | Fortgeschritten | Hochperformante lock-freie Datenstrukturen, SIMD-Vektorisierung |
-| **Go** | Fortgeschritten | Verteilte Steuerungsebenen, RPC-Micro-Daemons, Cloud-Netzwerke |
-| **POSIX Shell / Bash** | Sicher | Automatisierte Bereitstellungsskripte, Kernel-Build-Pipelines, CI-Orchestrierung |
-| **Python** | Sicher | Benchmark-Analysewerkzeuge, automatisierte Systemverifikation, Prototypen |
+| **Go** | Fortgeschritten | Verteilte Steuerungsebenen, Hochleistungs-RPC-Dienste, Cloud-Netzwerke |
+| **POSIX Shell / Bash** | Sicher | Produktions-Bereitstellungsskripte, Kernel-Build-Pipelines, CI/CD-Toolchains |
+| **Python** | Sicher | Benchmark-Analysewerkzeuge, Regressionsverifikation, Leistungsmodellierung |
 
 ### Systeme, Kernel & Low-Level-Architektur
 
@@ -70,9 +70,9 @@ Ich bin ein Software-Ingenieur für Systemprogrammierung und verteilte Infrastru
   - Segmentiertes Write-Ahead-Log (WAL) mit CRC32-Prüfsummen zur Gewährleistung von Absturzsicherheit und Datenkonsistenz.
   - Zweistufige gestaffelte Kompaktierung, die die Schreibverstärkung minimiert und die Lese-Latenz (p99) unter 120 Mikrosekunden hält.
 
-### 3. `packet-lens` — Kernel-Space eBPF Flow-Telemetrie-Agent
+### 3. `packet-lens` — Kernel-Space eBPF Flow-Telemetrie-Sonde (Probe)
 - **Sprache**: C / Go
-- **Beschreibung**: Schlanker Netzwerkbeobachtungs-Daemon, der über eBPF XDP/TC-Hooks angebunden ist und TCP-Round-Trip-Zeiten (RTT), Paketverlustraten und Retransmissionen mit minimalem CPU-Bedarf ermittelt.
+- **Beschreibung**: Schlanke Netzwerkbeobachtungs-Sonde, die über eBPF XDP/TC-Hooks angebunden ist und TCP-Round-Trip-Zeiten (RTT), Paketverlustraten und Retransmissionen mit minimalem CPU-Bedarf ermittelt.
 - **Highlights**:
   - Läuft vollständig im Kernel-Space; überträgt Telemetriedaten über Ringpuffer ohne Kopiervorgänge in den User-Space.
   - Nativer Prometheus-Metrik-Exporter mit sofortigen Latenzwarnungen im Sub-Millisekunden-Bereich.
