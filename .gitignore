@@ -1,0 +1,11 @@
+# Security & Secrets
+.env
+.env.*
+tokens.json
+credentials.json
+load_tokens.js
+
+# Browser profile
+profile/
+*.log
+
